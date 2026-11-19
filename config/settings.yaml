@@ -60,7 +60,10 @@ transcription:
 clips:
   gaming: true                              # Gaming / Reaction mode
   pipeline: {id: colingpt9/gta-vi-highlights}    # GTA plugin as the detector
-  gaming_layout: split
+  gaming_layout:                            # CaseOh: webcam box (x, y, w, h as fractions of the frame)
+    preset: split
+    cam: [0.0, 0.13, 0.21, 0.27]
+    by: user
   min_score: 55         # discard candidates scored below this (0-100).
                         # Higher = fewer, better clips. Kept generous on
                         # purpose: creators pick what to post — a ~2h stream
@@ -71,7 +74,7 @@ clips:
                         # (turn on the 60s+ toggle for TikTok-length clips)
   vertical: true        # true 9:16 1080x1920 with YOLOv8 subject tracking
   captions: true        # burn word-synced captions into the clips
-  outro: true           # append the 2.9s Clips Kitty end card to each clip.
+  outro: false          # append the 2.9s Clips Kitty end card to each clip.
                         # Stream-copied, so the clip is never re-encoded.
                         # Absent counts as true, so upgrading turns it on.
 
