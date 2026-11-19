@@ -30,6 +30,8 @@ Rules:
 - 3 to 7 words, plain text, at most one emoji at the end.
 - Describe what happens or tease the payoff, using only what the words above support. Never invent events.
 - Sound like a real clip page, not an ad. No hashtags, no quotes, no "watch until the end".
+- Be specific to THIS clip: name the actual thing that happens or is said (a word, a person, an object, a claim).
+- Banned generic phrases: "losing it", "can't believe", "you won't believe", "goes crazy", "is wild", "unhinged", "this is why", "insane".
 
 Reply with the hook only."""
 
