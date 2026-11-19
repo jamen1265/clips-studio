@@ -64,13 +64,13 @@ clips:
     preset: split
     cam: [0.0, 0.13, 0.21, 0.27]
     by: user
-  min_score: 65         # discard candidates scored below this (0-100).
+  min_score: 60         # discard candidates scored below this (0-100).
                         # Higher = fewer, better clips. Kept generous on
                         # purpose: creators pick what to post — a ~2h stream
                         # should yield ~50 clips to choose from.
   max_clips_per_video: 0  # 0 = automatic: keep every clip that passes min_score
   min_duration: 10      # seconds — clips land on sentence boundaries, so real
-  max_duration: 60      # lengths vary naturally across this 10-60s range
+  max_duration: 35      # lengths vary naturally across this 10-60s range
                         # (turn on the 60s+ toggle for TikTok-length clips)
   vertical: true        # true 9:16 1080x1920 with YOLOv8 subject tracking
   captions: true        # burn word-synced captions into the clips
@@ -82,10 +82,10 @@ scoring:
   # Multimodal fusion weights (must sum to 1.0). Raise audio/visual for
   # gameplay/stream content; raise text for talking-head/educational content.
   weights:
-    text: 0.30
-    visual: 0.20
-    reaction: 0.20
-    audio: 0.20
+    text: 0.20          # tuned for action: less talk, more loud/motion moments
+    visual: 0.25
+    reaction: 0.15
+    audio: 0.30
     engagement: 0.10
   signal_peak_percentile: 85   # how unusual a moment must be to become a candidate
   creator_context_max: 6       # max score bonus for creator-knowledge callbacks
